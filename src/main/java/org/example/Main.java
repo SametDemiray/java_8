@@ -37,7 +37,7 @@ public class Main {
 
         // Her user için talk methodunu çağırdık.
 
-        //   users.stream().forEach(user -> user.talk());
+        // users.stream().forEach(user -> user.talk());
         // Bu Alttaki ifadenin üstteki ile hiçbir farkı yok. (::) ifadesi User clasının içerisinde talk methodunu çağır demek. Yani
         // stream ile işlem akış sağladık foreach ile herbir User için parantez içindeki ifade ile talk methodunu çağırdık.
 
@@ -61,7 +61,7 @@ public class Main {
         System.out.println("------------filter()-collect()-----------");
 
         // filter() ile bunun id si 5 ten küçük olanları topladık,
-        //collect() ile bunları topladık ve ayrı bir listeye çevirdik bunu da  filteredListe attık.
+        // collect() ile bunları topladık ve ayrı bir listeye çevirdik bunu da  filteredListe attık.
 
         List<User> filteredList = users.stream().filter(user -> user.id < 5).collect(Collectors.toList());
 
@@ -87,7 +87,7 @@ public class Main {
         // filter ve map ile elemanları gezip onları değiştirebilerceğimiz gibi,
         // bir listeyi başka tipe de dönüştürebiliriz
         // yukarıdaki gibi tek bir argüman alınabileceği gibi aşağıdaki gibi birden fazla argüman da alabilir.
-        //int ve string gibi... ilk eleman int tipinde ikinci eleman ise string tipinde bir değer alıyor.
+        // int ve string gibi... ilk eleman int tipinde ikinci eleman ise string tipinde bir değer alıyor.
 
         System.out.println("-----------map()-ile-tip-dönüşüm------------");
 
