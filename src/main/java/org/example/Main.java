@@ -30,6 +30,7 @@ public class Main {
         // Bu işlem for döngüsü ile de yapılabilirdi fakat stream ile daha kompakt( kısa ve öz ) ve okunanilir bir kod yazmış olduk.
 
         System.out.println("Java_8");
+        
         users.stream().forEach(user -> {
             System.out.println(user.toString());
         });
@@ -74,9 +75,9 @@ public class Main {
         System.out.println("-----------map()-------------");
 
         // map() fonksiyonu bu User listesindeki her bir elemana gidip üzerinde değişiklik yapıp,
-        //onları yeni bir elemana map lememizi sağlıyor. Örneğin;
+        // onları yeni bir elemana map lememizi sağlıyor. Örneğin;
         // Mevcut listemizi değiştirmemek için collect metoduyla toplayıp collecttors ile yeni bir listeye atıyoruz.
-        //bu listemizin adı da
+        // bu listemizin adı da
 
         List<User> mappedList = users.stream().map(user -> new User(user.id + 100, user.name)).collect(Collectors.toList());
 
