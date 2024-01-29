@@ -5,9 +5,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+
+
 public class Main {
 
+
+
+
     public static void main(String[] args) {
+
+        Person person = new Person();
+        List<Person> people = new ArrayList<>();
+
+
 
         List<User> users = new ArrayList<>();
         users.add(new User(1, "Samet"));
@@ -49,6 +59,7 @@ public class Main {
 
         System.out.println("-----------filter()-------------");
 
+
         // filter() metodu
         // user içerisine id si 5 ten küçük olanları al demek bir nevi filtreleme fonksiyonu
         // döndürdükten sonra bunları listeden silmiyor
@@ -72,6 +83,7 @@ public class Main {
 
         filteredList.stream().forEach(User::talk);
 
+
         System.out.println("-----------map()-------------");
 
         // map() fonksiyonu bu User listesindeki her bir elemana gidip üzerinde değişiklik yapıp,
@@ -94,6 +106,7 @@ public class Main {
 
         Map<Integer, String> userMaplist = users.stream().collect(Collectors.toMap(user -> user.id, user -> user.name));
         userMaplist.forEach((integer, s) -> System.out.println(integer + " : " + s));
+
     }
 
     static class User {
@@ -115,8 +128,6 @@ public class Main {
 
         public void talk() {
             System.out.println("Hi, I am " + this.name);
-
-
         }
 
     }
